@@ -1,6 +1,10 @@
 <div class="box">
   <div class="header">
-    <span>{{ todo.title }}</span>
-    <button (click)="removeToDoListHandler()">-</button>
+    <input [(ngModel)]="newTitle" type="text" (blur)="editTitleHandler()" *ngIf="isEditMode; else content" />
+    <ng-template #content>
+      <span (dblclick)="activateEditMode()">{{ todo.title }}</span>
+    </ng-template>
+    <button (click)="removeToDoListHandler()">X</button>
   </div>
+  <todo-tasks [todoId]="todo.id"></todo-tasks>
 </div>

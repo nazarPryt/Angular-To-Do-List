@@ -2,4 +2,9 @@
   <input type="text" placeholder="add new ToDoList" [(ngModel)]="todoTitle" />
   <button (click)="addTodoHandler()">+</button>
 </div>
-<todo-todo *ngFor="let todo of todos$ | async" [todo]="todo" (removeToDoListEvent)="removeTodo($event)"></todo-todo>
+<todo-todo
+  *ngFor="let todo of todos$ | async"
+  [todo]="todo"
+  (removeToDoListEvent)="removeTodo($event)"
+  (editToDoListEvent)="editTodo($event)">
+</todo-todo>
