@@ -1,0 +1,16 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+
+  border: 2px solid black;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
