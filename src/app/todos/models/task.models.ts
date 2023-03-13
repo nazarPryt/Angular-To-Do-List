@@ -16,3 +16,7 @@ export interface GetTasksResponse {
   error: string;
   totalCount: number;
 }
+
+export interface DomainTask {
+  [key: string]: Task[];
+}
