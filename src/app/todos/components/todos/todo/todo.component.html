@@ -7,4 +7,6 @@
     <button (click)="removeToDoListHandler()">X</button>
   </div>
   <todo-tasks [todoId]="todo.id"></todo-tasks>
+  <todo-todo-filters (changeFilterEvent)="changeFilter($event)" [filter]="todo.filter"></todo-todo-filters>
+  <todo-todo-footer [addedDate]="todo.addedDate"></todo-todo-footer>
 </div>

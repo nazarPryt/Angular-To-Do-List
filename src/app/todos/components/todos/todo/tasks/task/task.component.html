@@ -1,5 +1,5 @@
 <div class="box">
-  <div>
+  <div [ngClass]="{ completed: task.status === taskStatusEnum.completed }">
     <input
       type="checkbox"
       (click)="changeTaskStatusHandler($event)"

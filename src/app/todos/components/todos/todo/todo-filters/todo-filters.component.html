@@ -1,0 +1,5 @@
+<div class="filters">
+  <button (click)="changeFilterHandler('all')" [ngClass]="{ active: filter === 'all' }">All</button>
+  <button (click)="changeFilterHandler('completed')" [ngClass]="{ active: filter === 'completed' }">Completed</button>
+  <button (click)="changeFilterHandler('active')" [ngClass]="{ active: filter === 'active' }">Active</button>
+</div>
