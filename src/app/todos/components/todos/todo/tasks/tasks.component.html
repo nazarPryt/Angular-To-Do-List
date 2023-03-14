@@ -1,2 +1,6 @@
 <input type="text" placeholder="add task" [(ngModel)]="taskTitle" (keyup.enter)="addTaskHandler()" />
-<todo-task *ngFor="let task of tasks$ | async" [task]="task" (removeTaskEvent)="removeTask($event)"></todo-task>
+<todo-task
+  *ngFor="let task of tasks$ | async"
+  [task]="task"
+  (removeTaskEvent)="removeTask($event)"
+  (changeTaskEvent)="changeTask($event)"></todo-task>
