@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../../../core/services/auth.service';
 
 @Component({
   selector: 'todo-login',
@@ -7,6 +8,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
+  constructor(private authService: AuthService) {}
   loginForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.pattern(`[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$`)]),
     password: new FormControl('', [Validators.required, Validators.minLength(3)]),
@@ -22,6 +24,6 @@ export class LoginComponent {
 
   onLoginSubmit() {
     const value = this.loginForm.value;
-    alert(JSON.stringify(value));
+    this.authService.login(value);
   }
 }
