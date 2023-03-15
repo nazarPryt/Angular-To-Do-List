@@ -1,5 +1,23 @@
 <div class="filters">
-  <button (click)="changeFilterHandler('all')" [ngClass]="{ active: filter === 'all' }">All</button>
-  <button (click)="changeFilterHandler('completed')" [ngClass]="{ active: filter === 'completed' }">Completed</button>
-  <button (click)="changeFilterHandler('active')" [ngClass]="{ active: filter === 'active' }">Active</button>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="changeFilterHandler('all')"
+    [ngClass]="{ active: filter === 'all' }">
+    All
+  </button>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="changeFilterHandler('completed')"
+    [ngClass]="{ active: filter === 'completed' }">
+    Done
+  </button>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="changeFilterHandler('active')"
+    [ngClass]="{ active: filter === 'active' }">
+    Active
+  </button>
 </div>

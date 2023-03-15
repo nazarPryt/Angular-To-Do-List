@@ -1,12 +1,19 @@
-<div class="header">
-  <button (click)="logOutHandler()">LogOut</button>
+<mat-toolbar color="primary" class="header">
+  <mat-form-field class="inputWr">
+    <input
+      matNativeControl
+      type="text"
+      placeholder="add new ToDoList"
+      [(ngModel)]="todoTitle"
+      (keyup.enter)="addTodoHandler()" />
+  </mat-form-field>
+
   <h1>Angular To Do List</h1>
-  <div>
-    <input type="text" placeholder="add new ToDoList" [(ngModel)]="todoTitle" />
-    <button (click)="addTodoHandler()">+</button>
-  </div>
-</div>
-<div class="box">
+
+  <button mat-raised-button color="warn" (click)="logOutHandler()">LogOut</button>
+</mat-toolbar>
+
+<div class="content">
   <todo-todo
     *ngFor="let todo of todos$ | async"
     [todo]="todo"

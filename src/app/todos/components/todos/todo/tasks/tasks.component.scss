@@ -1,0 +1,10 @@
+.input {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  input::placeholder {
+    text-align: center;
+
+  }
+}

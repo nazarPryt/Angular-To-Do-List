@@ -1,8 +1,13 @@
 .filters {
   display: flex;
+  gap: 4px;
   justify-content: space-between;
   width: 100%;
-}
-.active {
-  background-color: yellowgreen;
+
+  button {
+    font-size: 12px !important;
+  }
+  .active {
+    background-color: yellowgreen !important;
+  }
 }
