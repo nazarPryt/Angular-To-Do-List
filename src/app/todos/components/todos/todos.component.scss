@@ -1,12 +1,19 @@
 .header {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-
+  justify-content: space-evenly;
   margin-bottom: 20px;
+  h1 {
+    margin: 0;
+  }
+
 }
-.box {
+.inputWr {
+  input::placeholder {
+    text-align: center;
+  }
+}
+.content {
   display: flex;
   flex-wrap: wrap;
 }

@@ -1,4 +1,6 @@
-<input type="text" placeholder="add task" [(ngModel)]="taskTitle" (keyup.enter)="addTaskHandler()" />
+<mat-form-field class="input">
+  <input matNativeControl type="text" placeholder="add task" [(ngModel)]="taskTitle" (keyup.enter)="addTaskHandler()" />
+</mat-form-field>
 <todo-task
   *ngFor="let task of tasks$ | async"
   [task]="task"

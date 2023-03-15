@@ -8,6 +8,11 @@ import { TasksComponent } from './components/todos/todo/tasks/tasks.component';
 import { TaskComponent } from './components/todos/todo/tasks/task/task.component';
 import { TodoFiltersComponent } from './components/todos/todo/todo-filters/todo-filters.component';
 import { TodoFooterComponent } from './components/todos/todo/todo-footer/todo-footer.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -19,6 +24,15 @@ import { TodoFooterComponent } from './components/todos/todo/todo-footer/todo-fo
     TodoFooterComponent,
   ],
 
-  imports: [CommonModule, TodosRoutingModule, FormsModule],
+  imports: [
+    CommonModule,
+    TodosRoutingModule,
+    FormsModule,
+    MatButtonModule,
+    MatIconModule,
+    MatInputModule,
+    MatToolbarModule,
+    MatCheckboxModule,
+  ],
 })
 export class TodosModule {}

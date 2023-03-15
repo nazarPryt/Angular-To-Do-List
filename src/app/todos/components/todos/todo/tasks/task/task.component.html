@@ -10,5 +10,7 @@
     </ng-template>
   </div>
 
-  <button (click)="removeTaskHandler()">-</button>
+  <button mat-icon-button color="warn" aria-label="delete icon button" (click)="removeTaskHandler()">
+    <mat-icon>delete</mat-icon>
+  </button>
 </div>
